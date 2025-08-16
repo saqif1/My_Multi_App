@@ -1,0 +1,8 @@
+streamlit
+cot_reports
+pandas
+matplotlib
+plotly
+numpy
+scipy
+openai
