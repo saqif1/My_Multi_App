@@ -48,8 +48,8 @@ st.markdown("""
 st.title("🚀 Application Launcher")
 st.markdown("Select an application to launch:")
 
-# Create columns for the app buttons
-col1, col2 = st.columns(2)
+# Create columns for the app buttons (now 3 columns)
+col1, col2, col3 = st.columns(3)
 
 with col1:
     st.markdown(
@@ -73,6 +73,20 @@ with col2:
                 <div class="app-icon">🖼️</div>
                 <div class="app-title">Table Extractor</div>
                 <div class="app-description">Extract tables from images using AI</div>
+            </div>
+        </a>
+        """,
+        unsafe_allow_html=True
+    )
+
+with col3:
+    st.markdown(
+        """
+        <a href="/BTC_Dashboard" target="_self" style="text-decoration: none;">
+            <div class="app-button">
+                <div class="app-icon">₿</div>
+                <div class="app-title">BTC Volatility Dashboard</div>
+                <div class="app-description">Analyze BTC options volatility smiles with AI insights</div>
             </div>
         </a>
         """,
