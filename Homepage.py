@@ -101,7 +101,7 @@ st.markdown("2. Use the navigation menu on the left to return to this launcher")
 
 # LinkedIN
 st.markdown("---")
-st.markdown("### Connect with Me")
+st.markdown("### Connect with Me!")
 
 st.markdown("""
 <a href="https://www.linkedin.com/in/saqif-juhaimee-17322a119/">

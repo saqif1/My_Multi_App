@@ -171,3 +171,14 @@ if st.button("Generate Analysis"):
 # Data preview
 st.subheader("Data Preview")
 st.dataframe(filtered_data.sort_values(['expiry_date', 'strike']), use_container_width=True)
+
+# LinkedIN
+st.markdown("---")
+st.markdown("### Connect with Me!")
+
+st.markdown("""
+<a href="https://www.linkedin.com/in/saqif-juhaimee-17322a119/">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" width="20">
+    Saqif Juhaimee
+</a>
+""", unsafe_allow_html=True)

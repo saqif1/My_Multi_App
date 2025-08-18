@@ -366,7 +366,16 @@ st.dataframe(
     use_container_width=True
 )
 
+# LinkedIN
 st.markdown("---")
+st.markdown("### Connect with Me!")
+
+st.markdown("""
+<a href="https://www.linkedin.com/in/saqif-juhaimee-17322a119/">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" width="20">
+    Saqif Juhaimee
+</a>
+""", unsafe_allow_html=True)
 # st.subheader("Next Steps & Enhancements")
 # st.markdown("""
 # - **Price Overlay:** Integrate live futures prices from external APIs (e.g., Alpha Vantage, Polygon.io, or specialized data providers like Databento for futures) to correlate COT extremes with price action. This would likely involve fetching daily or weekly price data and aligning it with the COT report dates.

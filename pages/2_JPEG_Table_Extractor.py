@@ -213,3 +213,14 @@ if st.session_state.extracted_data:
             file_name="extracted_tables.zip",
             mime="application/zip"
         )
+
+# LinkedIN
+st.markdown("---")
+st.markdown("### Connect with Me!")
+
+st.markdown("""
+<a href="https://www.linkedin.com/in/saqif-juhaimee-17322a119/">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" width="20">
+    Saqif Juhaimee
+</a>
+""", unsafe_allow_html=True)
