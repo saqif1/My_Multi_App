@@ -110,7 +110,7 @@ st.plotly_chart(fig, use_container_width=True)
 st.subheader("AI Market Analysis")
 
 if st.button("Generate Analysis"):
-    with st.spinner("Analyzing volatility data..."):
+    with st.spinner("Analysing volatility data..."):
         try:
             client = openai.OpenAI(
                 base_url="https://openrouter.ai/api/v1",
@@ -133,7 +133,8 @@ if st.button("Generate Analysis"):
                         This 4 points must be in the analysis using appropriate dates: Near-Term Sentiment, Mid-Term Sentiment, Long-Term Sentiment, Potential Impact on S&P 500.
                         You must refer to the expiry dates in your analysis to make analysis more in-depth.
                         You must infer the shape of the smile for each expiry date to make analysis richer.
-                        You may add extra information or analysis where you deem fit after.
+                        You may add extra information or analysis where you deem fit after and can help your sp500 portfolio
+                        Assume you are talking to a beginner client.
                         """
                     },
                     {
