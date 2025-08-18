@@ -23,14 +23,15 @@ Upload images containing tables, and this app will extract the table data using 
 The extracted data will be displayed below and can be downloaded as CSV.
 """)
 
+api_key = "<YOUR_API_KEY>" #st.text_input("OpenRouter API Key", type="password")
+
 # Sidebar for API settings
 with st.sidebar:
-    st.header("API Configuration")
-    api_key = st.text_input("OpenRouter API Key", type="password")
+    st.header("Configurations:")
     model_options = [
         "mistralai/mistral-small-3.2-24b-instruct:free",
         "moonshotai/kimi-vl-a3b-thinking:free",
-        "google/gemini-2.5-pro-experimental",
+        "meta-llama/llama-3.2-11b-vision-instruct:free",
         "qwen/qwen2.5-vl-32b-instruct:free",
         "mistralai/mistral-small-3.1-24b-instruct:free",
         "google/gemma-3-4b:free",
