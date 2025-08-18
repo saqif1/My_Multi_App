@@ -114,7 +114,7 @@ if st.button("Generate Analysis"):
         try:
             client = openai.OpenAI(
                 base_url="https://openrouter.ai/api/v1",
-                api_key="<OPENROUTER_API_KEY>"
+                api_key="<YOU_OPENROUTER_API_KEY>"
             )
             
             response = client.chat.completions.create(
