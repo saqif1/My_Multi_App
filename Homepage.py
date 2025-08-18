@@ -2,7 +2,7 @@ import streamlit as st
 
 # Set page config
 st.set_page_config(
-    page_title="App Launcher",
+    page_title="Saqif's App Launcher",
     layout="wide",
     page_icon="🚀"
 )
@@ -45,7 +45,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # App header
-st.title("🚀 Application Launcher")
+st.title("🚀 Welcome to Saqif's Application Launcher")
 st.markdown("Select an application to launch:")
 
 # Create columns for the app buttons (now 3 columns)
@@ -98,3 +98,14 @@ st.markdown("---")
 st.markdown("### How to use:")
 st.markdown("1. Click on the application you want to use")
 st.markdown("2. Use the navigation menu on the left to return to this launcher")
+
+# LinkedIN
+st.markdown("---")
+st.markdown("### Connect with Me")
+
+st.markdown("""
+<a href="https://www.linkedin.com/in/saqif-juhaimee-17322a119/">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" width="20">
+    Saqif Juhaimee
+</a>
+""", unsafe_allow_html=True)

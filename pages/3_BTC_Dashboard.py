@@ -22,7 +22,7 @@ st.set_page_config(
         ## ₿ BTC Options Volatility Dashboard
         **Track Deribit's BTC option volatility smiles across expiries**
 
-        *Data updates every 30 minutes*
+        *Data updates every 10 minutes*
         """
     }
 )
