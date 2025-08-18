@@ -69,12 +69,13 @@ def save_to_csv(data, filename):
     """Save data to CSV, appending if file exists"""
     df = pd.DataFrame(data)
     
-    if os.path.exists(filename):
-        existing_df = pd.read_csv(filename)
-        combined_df = pd.concat([existing_df, df], ignore_index=True)
-        combined_df.to_csv(filename, index=False)
-    else:
-        df.to_csv(filename, index=False)
+    # if os.path.exists(filename):
+    #     existing_df = pd.read_csv(filename)
+    #     combined_df = pd.concat([existing_df, df], ignore_index=True)
+    #     combined_df.to_csv(filename, index=False)
+    # else:
+    #     df.to_csv(filename, index=False)
+    df.to_csv(filename, index=False)
 
 def main():
     print(f"{datetime.datetime.now()} - Starting data collection...")

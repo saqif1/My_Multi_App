@@ -114,9 +114,9 @@ if st.button("Generate Analysis"):
         try:
             client = openai.OpenAI(
                 base_url="https://openrouter.ai/api/v1",
-                api_key="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"
+                api_key="<OPENROUTER_API_KEY>"
             )
-
+            
             response = client.chat.completions.create(
                 extra_headers={
                     "HTTP-Referer": "http://localhost:8501",
