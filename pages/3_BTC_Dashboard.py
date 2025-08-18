@@ -7,7 +7,7 @@ import os
 from datetime import datetime, timezone, timedelta
 
 # Config
-DATA_DIR = Path("./data/App3_Data")
+DATA_DIR = Path("/home/ec2-user/My_Multi_App/data/App3_Data") #readline -f
 DATA_FILE = DATA_DIR / "volatility_data.csv"
 
 st.set_page_config(
@@ -107,7 +107,7 @@ fig.update_layout(
 st.plotly_chart(fig, use_container_width=True)
 
 # AI Analysis Section
-st.subheader("BTC Market Analysis by MistralAI")
+st.subheader("AI Market Analysis")
 
 if st.button("Generate Analysis"):
     with st.spinner("Analyzing volatility data..."):
@@ -122,7 +122,7 @@ if st.button("Generate Analysis"):
                     "HTTP-Referer": "http://localhost:8501",
                     "X-Title": "BTC Volatility Dashboard"
                 },
-                model="mistralai/mistral-small-3.2-24b-instruct:free",
+                model="deepseek/deepseek-r1-0528-qwen3-8b:free",
                 messages=[
                     {
                         "role": "system",
