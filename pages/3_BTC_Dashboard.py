@@ -123,29 +123,33 @@ if st.button("Generate Analysis"):
                     "X-Title": "BTC Volatility Dashboard"
                 },
                 model="deepseek/deepseek-r1-0528-qwen3-8b:free",
+                model= "mistralai/mistral-small-3.2-24b-instruct:free", #"deepseek/deepseek-r1-0528-qwen3-8b:free",
                 messages=[
                     {
                         "role": "system",
                         "content": """
-                        You are a professional investment analyst with investment holdings in the US SP500, from this BTC csv data of volatility 
-                        smile for different expiry dates, give your analysis on BTC sentiment and potential impact on sp500. 
-                        Don't include plots or other redundant information, only focus on analysis content.
-                        This 4 points must be in the analysis using appropriate dates: Near-Term Sentiment, Mid-Term Sentiment, Long-Term Sentiment, Potential Impact on S&P 500.
-                        You must refer to the expiry dates in your analysis to make analysis more in-depth.
-                        You must infer the shape of the smile for each expiry date to make analysis richer.
-                        You may add extra information or analysis where you deem fit after and can help your sp500 portfolio
-                        Assume you are talking to a beginner client.
+                        You are a professional Bitcoin market analyst.
+                        Your task is to analyze BTC options data to interpret the volatility smile/skew for each expiry date.
+                        For each expiry, plot the implied volatility against the strike price, identify the skew type (smile, downward skew, upward skew, or reverse skew), and infer market sentiment (bullish, bearish, or neutral).
+                        Based on the skew, recommend whether to go long BTC ETF or long BTC inverse ETF.
+                        Summarize your findings in a table with the following columns: Expiry Date, Skew Type, Market Sentiment, and Suggested Position.
+                        Highlight any unusual patterns or strong signals.
                         """
                     },
                     {
                         "role": "user",
                         "content": f"""
                         Analyze this BTC options data:
-                        {data}
+                        {filtered_data.to_string()}
+
+                        Provide the following:
+                        1. Interpretation of the skew type and market sentiment for each expiry.
+                        2. A recommendation for long BTC ETF or long BTC inverse ETF for each expiry.
+                        3. A summary table of the results.
                         """
                     }
-                ],
-                max_tokens=100000  # Reduced from 100000 to a reasonable value
+                ]
+                #,max_tokens=100000  # Reduced from 100000 to a reasonable value
             )
             
             # Display the raw analysis in a clean box
