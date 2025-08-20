@@ -45,7 +45,7 @@ def get_last_modified_time(filepath):
 
 
 # Load data
-@st.cache_data
+#@st.cache_data
 def load_data(filepath):
     df = pd.read_csv(filepath)
     df['expiry_date'] = pd.to_datetime(df['expiry_date'])
